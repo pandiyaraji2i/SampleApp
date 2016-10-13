@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9ye-9m-s6p">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="KZe-Ih-eY7">
+            <objects>
+                <viewController id="9ye-9m-s6p" customClass="ViewController" customModule="SampleApp_Swift_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="w6K-j2-UAC"/>
+                        <viewControllerLayoutGuide type="bottom" id="lYY-bd-yZl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tq3-1y-LT1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iMD-3Q-SgI">
+                                <rect key="frame" x="20" y="158" width="560" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="XVb-zG-2en"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="WQP-gM-iZQ">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9j-zq-20G">
+                                <rect key="frame" x="252" y="285" width="96" height="30"/>
+                                <state key="normal" title="Send Request"/>
+                                <connections>
+                                    <action selector="sendButton:" destination="9ye-9m-s6p" eventType="touchUpInside" id="mQR-et-suO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="c9j-zq-20G" firstAttribute="top" secondItem="iMD-3Q-SgI" secondAttribute="bottom" constant="60" id="6HU-yz-sFV"/>
+                            <constraint firstItem="WQP-gM-iZQ" firstAttribute="centerX" secondItem="tq3-1y-LT1" secondAttribute="centerX" id="9Da-DT-dj1"/>
+                            <constraint firstItem="iMD-3Q-SgI" firstAttribute="leading" secondItem="tq3-1y-LT1" secondAttribute="leading" constant="20" id="HBo-du-3C3"/>
+                            <constraint firstItem="c9j-zq-20G" firstAttribute="centerY" secondItem="tq3-1y-LT1" secondAttribute="centerY" id="iaa-9T-fh9"/>
+                            <constraint firstAttribute="trailing" secondItem="iMD-3Q-SgI" secondAttribute="trailing" constant="20" id="oLg-aq-7Y6"/>
+                            <constraint firstItem="c9j-zq-20G" firstAttribute="centerX" secondItem="tq3-1y-LT1" secondAttribute="centerX" id="sog-Fc-Azp"/>
+                            <constraint firstItem="WQP-gM-iZQ" firstAttribute="centerY" secondItem="tq3-1y-LT1" secondAttribute="centerY" id="wtY-6C-qxO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="requestBtn" destination="c9j-zq-20G" id="S09-p2-NKm"/>
+                        <outlet property="resultLabel" destination="iMD-3Q-SgI" id="gA7-sL-dby"/>
+                        <outlet property="showActivity" destination="WQP-gM-iZQ" id="MG5-Gh-Fvy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AGj-p5-Nuf" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="418"/>
+        </scene>
+    </scenes>
+</document>
